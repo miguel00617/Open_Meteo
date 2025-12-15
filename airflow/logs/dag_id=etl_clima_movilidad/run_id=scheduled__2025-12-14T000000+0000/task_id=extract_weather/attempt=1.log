@@ -1,0 +1,19 @@
+[2025-12-15T12:47:11.162+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-12-15T12:47:11.191+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_clima_movilidad.extract_weather scheduled__2025-12-14T00:00:00+00:00 [queued]>
+[2025-12-15T12:47:11.198+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_clima_movilidad.extract_weather scheduled__2025-12-14T00:00:00+00:00 [queued]>
+[2025-12-15T12:47:11.199+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-12-15T12:47:11.213+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): extract_weather> on 2025-12-14 00:00:00+00:00
+[2025-12-15T12:47:11.224+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'etl_clima_movilidad', 'extract_weather', 'scheduled__2025-12-14T00:00:00+00:00', '--job-id', '122', '--raw', '--subdir', 'DAGS_FOLDER/Dagetl.py', '--cfg-path', '/tmp/tmpt8ippjzy']
+[2025-12-15T12:47:11.227+0000] {logging_mixin.py:188} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61 DeprecationWarning: This process (pid=31) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-15T12:47:11.227+0000] {standard_task_runner.py:91} INFO - Job 122: Subtask extract_weather
+[2025-12-15T12:47:11.227+0000] {standard_task_runner.py:63} INFO - Started process 44 to run task
+[2025-12-15T12:47:11.290+0000] {task_command.py:426} INFO - Running <TaskInstance: etl_clima_movilidad.extract_weather scheduled__2025-12-14T00:00:00+00:00 [running]> on host 2b89330dc68f
+[2025-12-15T12:47:11.373+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='matias' AIRFLOW_CTX_DAG_ID='etl_clima_movilidad' AIRFLOW_CTX_TASK_ID='extract_weather' AIRFLOW_CTX_EXECUTION_DATE='2025-12-14T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-14T00:00:00+00:00'
+[2025-12-15T12:47:11.374+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-12-15T12:47:12.715+0000] {logging_mixin.py:188} INFO - Archivo subido a MinIO: weather_raw_20251215_124712.json
+[2025-12-15T12:47:12.717+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-12-15T12:47:12.717+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-12-15T12:47:12.728+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=etl_clima_movilidad, task_id=extract_weather, run_id=scheduled__2025-12-14T00:00:00+00:00, execution_date=20251214T000000, start_date=20251215T124711, end_date=20251215T124712
+[2025-12-15T12:47:12.766+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-12-15T12:47:12.787+0000] {taskinstance.py:3498} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-15T12:47:12.790+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
